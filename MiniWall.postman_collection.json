@@ -1,0 +1,215 @@
+{
+	"info": {
+		"_postman_id": "21b3082a-a547-4a11-8def-1f702ae02fd6",
+		"name": "MiniWall",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5020612"
+	},
+	"item": [
+		{
+			"name": "isAliveCheck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"charan1\",\n    \"password\": \"kingkong\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/users/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"charan1\",\n    \"password\": \"kingkong\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/users/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Posts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiY2hhcmFuIiwiaWQiOiI2Mzk1OTQ2MWFlYzQ0ZmY5MmMwZDI1Y2IiLCJpYXQiOjE2NzA3NDg1NjAsImV4cCI6MTY3MDc1MjE2MH0.7Q_sMMOoLsYVOudZcOHLUgjmTI15ylUttn-OElYkfZk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/posts/63959d0f9aafa74be0d19d7a",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"posts",
+						"63959d0f9aafa74be0d19d7a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Posts",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiY2hhcmFuIiwiaWQiOiI2Mzk1OTQ2MWFlYzQ0ZmY5MmMwZDI1Y2IiLCJpYXQiOjE2NzA3NDg1NjAsImV4cCI6MTY3MDc1MjE2MH0.7Q_sMMOoLsYVOudZcOHLUgjmTI15ylUttn-OElYkfZk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Hello world123\",\n    \"description\": \"Hello Description\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/posts",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Comment for Post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiY2hhcmFuMSIsImlkIjoiNjM5NjIwNTFiNzM2NjU3MTFiNTJiN2RhIiwiaWF0IjoxNjcwNzgzMDcwLCJleHAiOjE2NzA3ODY2NzB9.yN7x_ooZPEbQhra24X5ayxO5rhbQFcjQXFfplJFPC70",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"content\": \"Hello World\",\n    \"postId\": \"63962076b73665711b52b7de\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/comments/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"comments",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Like for Post",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiY2hhcmFuMSIsImlkIjoiNjM5NjI0M2UxMWVkZGM2NmFiNzI1ZDA4IiwiaWF0IjoxNjcwNzg0MDY3LCJleHAiOjE2NzA3ODc2Njd9.roI1DdYgEiZ4qNwyYkhnrIo27VnCrf8nZmV7MXYY_tw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"postId\": \"6396245311eddc66ab725d0b\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/likes",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"likes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
