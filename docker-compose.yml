@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  app:
+    image: charan192/miniwall
+    container_name: miniwall
+    environment:
+      - MONGODB_URL=mongodb+srv://charan:SuJB4Add1vTzD9SQ@cluster0.fsbigku.mongodb.net/miniwall?retryWrites=true&w=majority
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
